@@ -1,24 +1,45 @@
 package com.example.laboratorinis_darbas_1;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView tvMain;
+    String[] greetings = {
+            "Labas", // lietuvių
+            "Hello", // anglų
+            "Hola", // ispanų
+            "Bonjour", // prancūzų
+            "Hallo", // vokiečių
+            "Ciao", // italų
+            "Olá", // portugalų
+            "こんにちは", // japonų
+            "안녕하세요", // korėjiečių
+            "你好", // kinų
+            "Merhaba", // turkų
+            "Salam", // arabų
+            "Shalom", // hebrajų
+            "Hej", // švedų
+            "γειά σου" //graikų
+    };
+    int greetingIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        this.tvMain = findViewById(R.id.tvMain);
+    }
+
+    // Mygtukas: keičia tekstą
+    public void OnBtnClick(View view) {
+        greetingIndex = (greetingIndex + 1) % greetings.length;
+        this.tvMain.setText(greetings[greetingIndex]);
     }
 }
+
