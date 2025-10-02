@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">Laboratorinis_Darbas_1</string>
-    <string name="labas">Labas</string>
-    <string name="keisti_od">Keisti žodį</string>
-    <string name="keisti_spalv">Keisti spalvą</string>
 </resources>

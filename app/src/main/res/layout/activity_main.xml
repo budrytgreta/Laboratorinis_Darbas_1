@@ -23,7 +23,9 @@
         android:id="@+id/btnMain"
         android:layout_width="150dp"
         android:layout_height="70dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="291dp"
+        android:layout_marginEnd="219dp"
         android:layout_marginBottom="370dp"
         android:onClick="OnBtnClick"
         android:text="Keisti žodį"
@@ -35,27 +37,5 @@
         app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnColor"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="291dp"
-        android:layout_marginEnd="219dp"
-        android:layout_marginBottom="370dp"
-        android:onClick="OnBtnColorClick"
-        android:text="Keisti spalvą"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:backgroundTint="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Group
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

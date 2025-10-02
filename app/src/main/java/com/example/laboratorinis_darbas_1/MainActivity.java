@@ -28,18 +28,6 @@ public class MainActivity extends AppCompatActivity {
     };
     int greetingIndex = 0;
 
-    int[] colors = {
-            Color.RED,
-            Color.BLUE,
-            Color.GREEN,
-            Color.MAGENTA,
-            Color.CYAN,
-            Color.BLACK,
-            Color.DKGRAY,
-            Color.YELLOW
-    };
-    int colorIndex = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,12 +40,6 @@ public class MainActivity extends AppCompatActivity {
     public void OnBtnClick(View view) {
         greetingIndex = (greetingIndex + 1) % greetings.length;
         this.tvMain.setText(greetings[greetingIndex]);
-    }
-
-    // Mygtukas: keičia spalvą
-    public void OnBtnColorClick(View view) {
-        colorIndex = (colorIndex + 1) % colors.length;
-        this.tvMain.setTextColor(colors[colorIndex]);
     }
 }
 
